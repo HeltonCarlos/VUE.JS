@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    {{instrumento}}
+</div>
+
+<div id="app2">
+    {{instrumento}}
+</div>
+
+<div id="app3">
+    {{instrumento}}
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <script>
+    const vue = new Vue({
+                el:"#app",
+                data:{
+                       instrumento:'Guitarra',
+                     }
+                    }); 
+
+    const vue1 = new Vue({
+            el:"#app2",
+                data:{
+                       instrumento:'violão',
+                     }
+                    }); 
+
+    const vue2 = new Vue({
+                        
+
+                    el:"#app3",
+                data:{
+                       instrumento:'baixo',
+                     }
+                    }); 
+                  
+    
+    </script>
+</body>
+</html>
