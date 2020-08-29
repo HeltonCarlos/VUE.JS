@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula03</title>
+</head>
+<body>
+
+<div id="app">
+ 
+    <a :href="link">acessar</a>
+    <p :class="color">Texto azul</p>
+    <p :class="comprar?comprar:nao">Pode comprar</p>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <script>
+        const vm= new Vue({
+            el:"#app",
+            data:{
+                link:'www.facebook.com',
+                color:'azul',
+                comprar:'true',
+                nao:'falso',
+            }
+        })
+    </script>
+</body>
+</html>
