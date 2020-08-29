@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods</title>
+</head>
+<body>
+
+<div id="app">
+   <h2>{{produto}}</h2>
+   <p>{{preco}}</p>
+   <button @click="Adicionar">Adicionar</button>
+   <button @click="Remover">Remover</button>
+   <p>{{total*preco}}</p>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <script>
+    const vue = new Vue({
+                el:"#app",
+                data:{
+                       produto:'Guitarra',
+                       preco:50,
+                       total:1,
+                     },
+
+                     methods:{
+                        Adicionar(){
+                            this.total++
+                        },
+                       Remover(){
+                            this.total--
+                        }
+
+
+                     },
+                    }); 
+    
+    </script>
+</body>
+</html>
