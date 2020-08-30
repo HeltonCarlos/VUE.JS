@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula04</title>
+</head>
+<body>
+
+<div id="app">
+ 
+ <template>
+     <p v-if="btn===1">TEXTO01, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur necessitatibus in mollitia nostrum voluptate porro fugiat accusantium aliquam. Vero ducimus vel nemo amet eius id ipsa error nostrum hic quis!</p>
+
+     <p v-else-if="btn===2">TEXTO02, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur necessitatibus in mollitia nostrum voluptate porro fugiat accusantium aliquam. Vero ducimus vel nemo amet eius id ipsa error nostrum hic quis!</p>
+
+     <p v-else="btn===3">TEXTO03, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur necessitatibus in mollitia nostrum voluptate porro fugiat accusantium aliquam. Vero ducimus vel nemo amet eius id ipsa error nostrum hic quis!</p>
+ </template>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <script>
+     const vm = new Vue({
+         el:'#app',
+         data:{
+            btn:3,
+         }
+     })
+    </script>
+</body>
+</html>

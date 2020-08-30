@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula05</title>
+</head>
+<body>
+
+<div id="app">
+<h3>Computador</h3>
+<p>R$<span>{{valorpc}}</span></p>
+ <button v-show="estoque" @click="addItem">Adicionar</button>
+ <button v-show="unidade"
+ @click="removerItem">Remover</button>
+ <p>Carrinho<span>{{unidade}}</span></p>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <script>
+     const vm = new Vue({
+         el:'#app',
+         data:{
+                valorpc:30,
+                unidade:0,
+                estoque:3,
+         },
+         methods:{
+            addItem(){
+                this.unidade++;
+                this.estoque--;
+            },
+            removerItem(){
+                this.unidade--;
+                this.estoque++;
+            },
+         }
+     })
+    </script>
+</body>
+</html>
