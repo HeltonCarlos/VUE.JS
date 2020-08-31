@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula05</title>
+</head>
+<body>
+
+<div id="app">
+        <h2>{{nome}}</h2>
+        <p>{{preco}}</p>
+        <div v-html="link"></div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <script>
+     const vm= new Vue({
+         el:"#app",
+         data:{
+             nome:"Produto - Computador",
+             preco:30.99,
+            link:'<a href="https://www.americanas.com.br/produto/41502453/computador-pc-cpu-intel-core-i7-12gb-hd-3tb-hdmi-easypc-standard?pfm_carac=computador%20i7&pfm_index=3&pfm_page=search&pfm_pos=grid&pfm_type=search_page">PC</a>',
+         }
+     })
+    </script>
+</body>
+</html>
