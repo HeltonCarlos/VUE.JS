@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade01</title>
+</head>
+<body>
+    <div id="app">
+        <p :class="valor">Pagou sim</p>
+        <p :class="{ativo}">Mostra texto</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script>
+        const vm=new Vue({
+            el:'#app',
+            data:{
+                valor:'verde',
+                ativo:false,
+            }
+        })
+    </script>
+
+    <style>
+        .ativo{color:blueviolet;}
+        .verde{background: green;color: #fff;}
+        .vermelho{background: red;color: #fff;}
+    </style>
+</body>
+</html>
