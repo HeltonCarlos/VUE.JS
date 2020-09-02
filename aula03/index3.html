@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+        <h1>De seu padrão ao botão</h1>
+        <form action="">
+            <label>width</label>
+            <input type="text" v-model="a.width">
+            <label>Height</label>
+            <input type="text" v-model="a.height">
+            <label>Fonte</label>
+            <input type="text" v-model="a.fontSize">
+            <label>Color fonte</label>
+            <input type="color" name="" id="" v-model="a.color">
+            <label>Background</label>
+            <input type="color" v-model="a.background">
+
+            <a :style="a" href="">MODIFICAR</a>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script>
+
+const vm = new Vue({
+    el:"#app",
+    data:{
+        a:{
+            width:'70px',
+            height:'20px',
+            fontSize:'10px',
+            color:'#545454',
+            background:'#000000'
+        }
+    }
+})
+
+    </script>
+
+    <style>
+        input{
+            display: block;
+        }
+
+        a{display: block;margin-top:50px;}
+    </style>
+</body>
+</html>
