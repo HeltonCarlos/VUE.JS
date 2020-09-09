@@ -27,10 +27,11 @@
         <div id="app">
             <h2>{{produto}}</h2>
             <p>{{codigo}}</p>
-            <p>R${{valor}}</p>
+            <p>R${{valor*uni}}</p>
             <p>{{uni}}Unidade(s)</p>
-            <button>+</button>
-            <button>-</button>
+            <p>{{estoque}}Unidade(s)</p>
+            <button  @click="addItem">+</button>
+            <button  @click="excItem">-</button>
             <button>Comprar</button>
         </div>
     </section>
@@ -45,7 +46,22 @@
             codigo:123456789,
             valor:49.99,
             uni:1,
+            estoque:5,
         }
+        ,
+
+methods:{
+    addItem(){
+        this.uni++;
+        this.estoque--;
+    },
+
+    excItem(){
+        this.uni--;
+        this.estoque++;
+    }
+    }
+
     })
     </script>
 </body>
