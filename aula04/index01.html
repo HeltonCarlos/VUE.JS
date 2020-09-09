@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Loja virtual</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Loja virtual</h1>
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Produto</a></li>
+                    <li><a href="">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+    <img src="bolsa.jpg" alt="" width="250px">
+        </div>
+        <div id="app">
+            <h2>{{produto}}</h2>
+            <p>{{codigo}}</p>
+            <p>R${{valor}}</p>
+            <p>{{uni}}Unidade(s)</p>
+            <button>+</button>
+            <button>-</button>
+            <button>Comprar</button>
+        </div>
+    </section>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script>
+
+    const vm = new Vue({
+        el:"#app",
+        data:{
+            produto:'Bolsa Vermelha',
+            codigo:123456789,
+            valor:49.99,
+            uni:1,
+        }
+    })
+    </script>
+</body>
+</html>
