@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula05-Formulario</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <form action="" v-on:submit.prevent="checkForm">
+
+        <input type="text" v-model="name" placeholder="Digite seu nome">
+        <input type="number" v-model="idade" placeholder="Digite sua idade">
+        <input type="button" value="enviar">
+        <div v-for="error in erros"></div>
+        
+    </form>     
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script>
+
+        const vm = new Vue({
+            el:"#app",
+            data:{
+                name:null,
+                idade:null,
+                erros:[],
+            },
+            methods:{
+                    checkForm(){
+                        this.erros=[];
+                        if (!this.name){
+                            this.erros.push('Digite seu nome');
+                        }
+                        if (!this.idade){
+                            this.erros.push('Digite sua idade');
+                        }
+                    }
+                    
+            }
+        })
+
+    </script>
+</body>
+
+
+</html>
